@@ -1,0 +1,163 @@
+/**
+*  
+*   To compile just the current active file run the "build active file" Task.
+*
+*   To compile all source file in the workspace run the "build current directory" Task (remember
+*   that in this case you can have only one source file with a function named "main" in workspaceFolder).
+*/
+{
+    "version": "2.0.0",
+
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "clean build",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": "rm -rf ./build/",
+            "windows": {
+                "command": "rm -R .\\build\\"
+            }
+        },
+        {
+            "type": "shell",
+            "label": "make build dir",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "command": "mkdir -p build",
+            "windows": {
+                "command": ".\\.vscode\\make_build_dir.bat\""
+            }
+        },
+        {
+            "type": "shell",
+            "label": "DEBUG C: build active file",
+            "dependsOn": "make build dir",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "windows": {
+                "command": "gcc.exe",
+                "args": [
+                    "-fdiagnostics-color=always",
+                    "-g",
+                    "-Og",
+                    "-Wall",
+                    "-Wextra",
+                    "-Wpedantic",
+                    "-std=c17",
+                    "${file}",
+                    "-o",
+                    "${workspaceFolder}\\build\\${fileBasenameNoExtension}_D.exe"
+                ]
+            },
+            "linux": {
+                "command": "/usr/bin/gcc",
+                "args": [
+                    "-fdiagnostics-color=always",
+                    "-g",
+                    "-Og",
+                    "-Wall",
+                    "-Wextra",
+                    "-Wpedantic",
+                    "-std=c17",
+                    "${file}",
+                    "-o",
+                    "${workspaceFolder}/build/${fileBasenameNoExtension}_D"
+                ]
+            },
+            "osx": {
+                "command": "/usr/bin/clang",
+                "args": [
+                    "-fdiagnostics-color=always",
+                    "-g",
+                    "-Og",
+                    "-Wall",
+                    "-Wextra",
+                    "-Wpedantic",
+                    "-std=c17",
+                    "${file}",
+                    "-o",
+                    "${workspaceFolder}/build/${fileBasenameNoExtension}_D"
+                ]
+            }
+        },
+        {
+            "type": "shell",
+            "label": "DEBUG C: build current directory",
+            "dependsOn": "make build dir",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "windows": {
+                "command": "gcc.exe",
+                "args": [
+                    "-fdiagnostics-color=always",
+                    "-g",
+                    "-Og",
+                    "-Wall",
+                    "-Wextra",
+                    "-Wpedantic",
+                    "-std=c17",
+                    "${fileDirname}\\**.c",
+                    "-o",
+                    "${workspaceFolder}\\build\\${fileBasenameNoExtension}_D.exe"
+                ]
+            },
+            "linux": {
+                "command": "/usr/bin/gcc",
+                "args": [
+                    "-fdiagnostics-color=always",
+                    "-g",
+                    "-Og",
+                    "-Wall",
+                    "-Wextra",
+                    "-Wpedantic",
+                    "-std=c17",
+                    "${fileDirname}/**.c",
+                    "-o",
+                    "${workspaceFolder}/build/${fileBasenameNoExtension}_D"
+                ]
+            },
+            "osx": {
+                "command": "/usr/bin/clang",
+                "args": [
+                    "-fdiagnostics-color=always",
+                    "-g",
+                    "-Og",
+                    "-Wall",
+                    "-Wextra",
+                    "-Wpedantic",
+                    "-std=c17",
+                    "${workspaceFolder}/*.c",
+                    "-o",
+                    "${workspaceFolder}/build/${fileBasenameNoExtension}_D"
+                ]
+            }
+        },
+        {
+            "label": "Open Terminal",
+            "type": "shell",
+            "command": "echo \"Mac only!\"",
+            "osx": {
+                "command": "osascript -e 'tell application \"Terminal\"\ndo script \"echo Ready\"\nend tell'"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
