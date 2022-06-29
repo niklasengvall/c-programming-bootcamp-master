@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jun 28 13:07:43 2022
+# Make data base, printed on Tue Jun 28 13:21:11 2022
 
 # Variables
 
@@ -21,7 +21,7 @@ NO_AT_BRIDGE = 1
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2d29f459-f191-46aa-8ac1-8b7b903555d0.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-cead01f7-2277-4d9b-abec-aadb656f97d7.sock
 # environment
 LC_NAME = sv_SE.UTF-8
 # environment
@@ -192,7 +192,6 @@ GIO_LAUNCHED_DESKTOP_FILE_PID = 245692
 _ = /usr/bin/make
 # environment
 LC_PAPER = sv_SE.UTF-8
- 
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -244,9 +243,9 @@ LC_IDENTIFICATION = sv_SE.UTF-8
 
 # Directories
 
-# . (device 38, inode 208758): 10 files, no impossibilities.
+# . (device 38, inode 208758): 11 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -255,6 +254,7 @@ LC_IDENTIFICATION = sv_SE.UTF-8
 # Files
 
 # Not a target:
+ 
 Makefile:
 #  Implicit rule search has been done.
 #  File does not exist.
@@ -296,12 +296,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 18 / storage = 165 B / avg = 9 B
-# current buf: size = 8162 B / used = 165 B / count = 18 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 19 / storage = 170 B / avg = 8 B
+# current buf: size = 8162 B / used = 170 B / count = 19 / avg = 8 B
 
-# strcache performance: lookups = 21 / hit rate = 14%
+# strcache performance: lookups = 22 / hit rate = 13%
 # hash-table stats:
-# Load=18/8192=0%, Rehash=0, Collisions=0/21=0%
-# Finished Make data base on Tue Jun 28 13:07:43 2022
+# Load=19/8192=0%, Rehash=0, Collisions=0/22=0%
+# Finished Make data base on Tue Jun 28 13:21:11 2022
 
  
