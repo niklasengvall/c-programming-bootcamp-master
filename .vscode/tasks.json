@@ -95,6 +95,63 @@
         },
         {
             "type": "shell",
+            "label": "RELEASE C: build active file",
+            "dependsOn": "make build dir",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "windows": {
+                "command": "gcc.exe",
+                "args": [
+                    "-fdiagnostics-color=always",
+                    "-O3",
+                    "-Wall",
+                    "-Wextra",
+                    "-Wpedantic",
+                    "-std=c17",
+                    "${file}",
+                    "-o",
+                    "${workspaceFolder}\\build\\${fileBasenameNoExtension}_D.exe"
+                ]
+            },
+            "linux": {
+                "command": "/usr/bin/gcc",
+                "args": [
+                    "-fdiagnostics-color=always",
+                    "-O3",
+                    "-Wall",
+                    "-Wextra",
+                    "-Wpedantic",
+                    "-std=c17",
+                    "${file}",
+                    "-o",
+                    "${workspaceFolder}/build/${fileBasenameNoExtension}_D"
+                ]
+            },
+            "osx": {
+                "command": "/usr/bin/clang",
+                "args": [
+                    "-fdiagnostics-color=always",
+                    "-O3",
+                    "-Wall",
+                    "-Wextra",
+                    "-Wpedantic",
+                    "-std=c17",
+                    "${file}",
+                    "-o",
+                    "${workspaceFolder}/build/${fileBasenameNoExtension}_D"
+                ]
+            }
+        },
+        {
+            "type": "shell",
             "label": "DEBUG C: build current directory",
             "dependsOn": "make build dir",
             "problemMatcher": [
