@@ -29,6 +29,8 @@ int main()
     unsigned int x;          // where we store the number to test if it's a prime number
     unsigned int lowerLimit;
     unsigned int upperLimit;
+    unsigned int firstPrimeNumber = -1;
+    bool         foundFirstPrimeNumber = false;
     bool         test;
     bool         isPrime = true;
 
@@ -48,7 +50,7 @@ int main()
         goto end_of_code;
     }
 
-    printf("Prime numbers up to %d: ", upperLimit); 
+    printf("Prime numbers up to %d:\n", upperLimit); 
     for (x = lowerLimit; x <= upperLimit; x++) // Test every number 
     {
         for (unsigned int d = 2; d < x; d++) // We dont test to divide x by itself (d < x)
@@ -63,9 +65,20 @@ int main()
         }
         if (isPrime) // If it's a prime number print it on the screen
         {
+            if(!foundFirstPrimeNumber)
+            {
+               foundFirstPrimeNumber = true;
+               firstPrimeNumber = x;
+               printf("The first prime number above %d is %d\n",lowerLimit, firstPrimeNumber);  
+            }
             printf("%d ", x);
         }
     }
+    if (!foundFirstPrimeNumber)
+    {
+        printf("Cannot find prime numbers between %d and %d\n",lowerLimit, upperLimit); 
+    }
+
     printf("\n"); 
 end_of_code:    
     printf("\n\n=== ByteGarage ===\n\n"); 
