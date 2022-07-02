@@ -102,7 +102,7 @@
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": false
             },
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -118,7 +118,7 @@
                     "-std=c17",
                     "${file}",
                     "-o",
-                    "${workspaceFolder}\\build\\${fileBasenameNoExtension}_D.exe"
+                    "${workspaceFolder}\\build\\${fileBasenameNoExtension}_R.exe"
                 ]
             },
             "linux": {
@@ -132,7 +132,7 @@
                     "-std=c17",
                     "${file}",
                     "-o",
-                    "${workspaceFolder}/build/${fileBasenameNoExtension}_D"
+                    "${workspaceFolder}/build/${fileBasenameNoExtension}_R"
                 ]
             },
             "osx": {
@@ -146,7 +146,7 @@
                     "-std=c17",
                     "${file}",
                     "-o",
-                    "${workspaceFolder}/build/${fileBasenameNoExtension}_D"
+                    "${workspaceFolder}/build/${fileBasenameNoExtension}_R"
                 ]
             }
         },
