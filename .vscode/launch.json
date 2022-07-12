@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Build and debug active file",
+            "name": "Debug active file",
             "type": "cppdbg",
             "request": "launch",
             "args": [],
@@ -16,14 +16,14 @@
             false,
             "MIMode": "gdb",
 
-            "program": "${fileDirname}/build/${fileBasenameNoExtension}_D",
+            "program": "${workspaceFolder}/build/${fileBasenameNoExtension}_D",
 
             "linux": {
                "miDebuggerPath": "/usr/bin/gdb", 
             },
 
             "windows": {
-                "program": "${fileDirname}\\build\\${fileBasenameNoExtension}.exe",
+                "program": "${workspaceFolder}\\build\\${fileBasenameNoExtension}_D.exe",
                 "miDebuggerPath": "gdb.exe",
             },
 
@@ -39,8 +39,7 @@
                     "ignoreFailures": true
                 }
             ],
-
-            "preLaunchTask": "build active file",
+            "preLaunchTask": "DEBUG C: build active file",
         }
     ]
 }
