@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <time.h>
 
 /**
  * === Prime Numbers Improved === 
@@ -22,8 +23,12 @@
  * 
  */
 
-const int MAX = 1000;
+const int MAX = 1000000;
 int firstPrimeNumber = -1;
+int noOfPrimes = 0;
+
+int primeArray[100000];
+
 
 // Function declarations
 void ErrorMessage();
@@ -47,12 +52,27 @@ int main()
         ErrorMessage();
         return EXIT_FAILURE;
     }
-    
+
     // Check for primes between 2 and upperLimit
     printf("Prime numbers up to %d:\n", upperLimit);
 
+    // To store the execution time of a C program
+    double time_spent = 0.0;
+    clock_t begin = clock();    
+
     PrimeCheck(2, upperLimit, primeBelow);
     
+    // Stop the clock
+    clock_t end = clock(); 
+
+    // calculate elapsed time by finding difference (end - begin) and
+    // dividing the difference by CLOCKS_PER_SEC to convert to seconds
+    time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
+ 
+    printf("\nThe elapsed time is %f seconds.\n", time_spent);
+    printf("\nAnd when I checked %d numbers, I found %d primes.\n\n", upperLimit - 2, noOfPrimes);
+    
+
     /* Find the first prime number above lowerLimit */
     int lowerLimit;
     printf("Enter the lower limit: ");
@@ -95,7 +115,10 @@ void PrimeCheck(int lowLimit, int maxLimit, int type)
         int ip = IsPrime(number);
         if (ip && type == 0)
         {
-            printf("%d\n", number);
+            //printf("%d\n", number);
+            primeArray[noOfPrimes] = number;
+            ++noOfPrimes;
+            
         }
         if (ip && type == 1)
         {
