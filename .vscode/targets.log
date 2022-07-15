@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul  1 17:18:04 2022
+# Make data base, printed on Fri Jul 15 18:39:12 2022
 
 # Variables
 
@@ -20,8 +20,6 @@ LC_ALL = C
 NO_AT_BRIDGE = 1
 # environment
 GJS_DEBUG_OUTPUT = stderr
-# environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-1620e18a-2e17-481e-9875-2d6c4e8a2fe0.sock
 # environment
 LC_NAME = sv_SE.UTF-8
 # environment
@@ -50,12 +48,10 @@ MAIL = thunderbird
 XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
-# environment
-VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/niklas/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+VSCODE_CODE_CACHE_PATH = /home/niklas/.config/Code/CachedData/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
@@ -70,8 +66,6 @@ XAUTHORITY = /home/niklas/.Xauthority
 MAKEFLAGS = pqrR
 # makefile
 CURDIR := /home/niklas/Kod/udemy/c-programming-bootcamp-master
-# environment
-VSCODE_PIPE_LOGGING = true
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
@@ -91,15 +85,13 @@ MAKEFILE_LIST :=
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
-VSCODE_PID = 55517
+VSCODE_PID = 115707
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/garuda:@/tmp/.ICE-unix/10612,unix/garuda:/tmp/.ICE-unix/10612
+SESSION_MANAGER = local/garuda:@/tmp/.ICE-unix/3882,unix/garuda:/tmp/.ICE-unix/3882
 # automatic
 *F = $(notdir $*)
 # environment
@@ -145,8 +137,6 @@ CINNAMON_VERSION = 5.4.2
 # environment
 LC_TIME = sv_SE.UTF-8
 # environment
-VSCODE_LOG_NATIVE = false
-# environment
 LC_TELEPHONE = sv_SE.UTF-8
 # automatic
 ?F = $(notdir $?)
@@ -187,7 +177,7 @@ MAKE_VERSION := 4.3
 # environment
 LC_MEASUREMENT = sv_SE.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 55500
+GIO_LAUNCHED_DESKTOP_FILE_PID = 115689
 # environment
 _ = /usr/bin/make
 # environment
@@ -197,6 +187,7 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GTK_OVERLAY_SCROLLING = 1
 # environment
+ 
 XDG_SESSION_CLASS = user
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
@@ -207,7 +198,7 @@ HOME = /home/niklas
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-a8729adb-1.68.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-a8729adb-1.69.1-main.sock
 # environment
 TERM = gnome-terminal
 # environment
@@ -223,7 +214,6 @@ SUFFIXES :=
 # environment
 VSCODE_CLI = 1
 # environment
- 
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/niklas
@@ -236,7 +226,7 @@ GDMSESSION = cinnamon
 # environment
 LC_IDENTIFICATION = sv_SE.UTF-8
 # variable set hash-table stats:
-# Load=111/1024=11%, Rehash=0, Collisions=9/138=7%
+# Load=106/1024=10%, Rehash=0, Collisions=8/133=6%
 
 # Pattern-specific Variable Values
 
@@ -302,6 +292,6 @@ GNUmakefile:
 # strcache performance: lookups = 22 / hit rate = 13%
 # hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=0/22=0%
-# Finished Make data base on Fri Jul  1 17:18:04 2022
+# Finished Make data base on Fri Jul 15 18:39:12 2022
 
  
