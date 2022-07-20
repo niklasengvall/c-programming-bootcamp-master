@@ -1,4 +1,4 @@
-#include <stdio.h>
+// #include <stdio.h>  // Result is we miss printf function
 #include <stdlib.h>
 
 // double average(double a, double b); // Out commented a good function declaration
