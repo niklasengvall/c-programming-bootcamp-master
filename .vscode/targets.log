@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 24 12:59:35 2022
+# Make data base, printed on Sun Jul 24 18:19:02 2022
 
 # Variables
 
@@ -246,6 +246,7 @@ LC_IDENTIFICATION = sv_SE.UTF-8
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
+ 
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
@@ -291,6 +292,6 @@ GNUmakefile:
 # strcache performance: lookups = 22 / hit rate = 13%
 # hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=0/22=0%
-# Finished Make data base on Sun Jul 24 12:59:35 2022
+# Finished Make data base on Sun Jul 24 18:19:02 2022
 
  
