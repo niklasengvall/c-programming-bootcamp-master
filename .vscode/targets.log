@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 24 18:19:02 2022
+# Make data base, printed on Sun Jul 24 23:34:40 2022
 
 # Variables
 
@@ -85,13 +85,13 @@ MAKEFILE_LIST :=
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 18845
+VSCODE_PID = 439639
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/garuda:@/tmp/.ICE-unix/3944,unix/garuda:/tmp/.ICE-unix/3944
+SESSION_MANAGER = local/garuda:@/tmp/.ICE-unix/3948,unix/garuda:/tmp/.ICE-unix/3948
 # automatic
 *F = $(notdir $*)
 # environment
@@ -133,7 +133,7 @@ MOTD_SHOWN = pam
 # automatic
 ^F = $(notdir $^)
 # environment
-CINNAMON_VERSION = 5.4.6
+CINNAMON_VERSION = 5.4.7
 # environment
 LC_TIME = sv_SE.UTF-8
 # environment
@@ -177,7 +177,7 @@ MAKE_VERSION := 4.3
 # environment
 LC_MEASUREMENT = sv_SE.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 18828
+GIO_LAUNCHED_DESKTOP_FILE_PID = 439621
 # environment
 _ = /usr/bin/make
 # environment
@@ -246,7 +246,6 @@ LC_IDENTIFICATION = sv_SE.UTF-8
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
- 
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
@@ -265,6 +264,7 @@ all:
 #  File has not been updated.
 
 # Not a target:
+ 
 makefile:
 #  Implicit rule search has been done.
 #  File does not exist.
@@ -292,6 +292,6 @@ GNUmakefile:
 # strcache performance: lookups = 22 / hit rate = 13%
 # hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=0/22=0%
-# Finished Make data base on Sun Jul 24 18:19:02 2022
+# Finished Make data base on Sun Jul 24 23:34:40 2022
 
  
