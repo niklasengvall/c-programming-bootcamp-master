@@ -74,7 +74,8 @@
                     "-std=gnu2x",
                     "${file}",
                     "-o",
-                    "${workspaceFolder}/build/${fileBasenameNoExtension}_D"
+                    "${workspaceFolder}/build/${fileBasenameNoExtension}_D",
+                    "-lm"
                 ]
             },
             "osx": {
@@ -138,7 +139,8 @@
                     "-std=gnu2x",
                     "${file}",
                     "-o",
-                    "${workspaceFolder}/build/${fileBasenameNoExtension}_R"
+                    "${workspaceFolder}/build/${fileBasenameNoExtension}_R",
+                    "-lm"
                 ]
             },
             "osx": {
