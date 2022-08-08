@@ -19,6 +19,15 @@
  *    "This is a sample string"
  *               ------
  * 
+ *  - Task 3: strtok
+ *    Store string tokens in a matrix and print:
+ *    "This, is a. sample-string"
+ *    [0] This
+ *    [1] is
+ *    [2] a
+ *    [3] sample
+ *    [4] string
+ * 
  */
 
 // Return no of found characters
@@ -71,6 +80,23 @@ void PrintSubstring(char str[], char sub[], int index)
     }    
 }
 
+//return the numbers of tokens found in the string
+int TokenizeString(char str[], char delimiters[], int tokMaxLen, char tokens[][tokMaxLen])
+{
+    int i;
+    char *ptok = str;
+    for (i = 0; ptok; i++) // run as long as ptok != NULL <=> end of string, no token found
+    {
+        ptok = strtok(i == 0 ? ptok : NULL, delimiters); // first time we return the address 
+        strncpy(tokens[i], ptok, ptok ? tokMaxLen : 0); // Can't just asign an address, must copy the string if ptok != NULL and send the new address or NULL if no token found
+    }
+    return i; // Number of token we found
+}
+
+void PrintTokens(char str[], int tokMaxLen, char tokens[][tokMaxLen], int noOfTokens)
+{
+    
+}
 int main()
 {
     printf("\n=== String Searching and Tokenization ===\n\n"); 
