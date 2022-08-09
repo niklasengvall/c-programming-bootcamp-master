@@ -81,7 +81,7 @@ void PrintSubstring(char str[], char sub[], int index)
 }
 
 //return the numbers of tokens found in the string
-int TokenizeString(char str[], char delimiters[], int tokMaxLen, char tokens[][tokMaxLen])
+int TokenizeString(char str[], const char delimiters[], int tokMaxLen, char tokens[][tokMaxLen])
 {
     int i;
     char *ptok = str;
@@ -90,18 +90,23 @@ int TokenizeString(char str[], char delimiters[], int tokMaxLen, char tokens[][t
         ptok = strtok(i == 0 ? ptok : NULL, delimiters); // first time we return the address 
         strncpy(tokens[i], ptok, ptok ? tokMaxLen : 0); // Can't just asign an address, must copy the string if ptok != NULL and send the new address or NULL if no token found
     }
-    return i; // Number of token we found
+    return i - 1; // Number of token we found - 1 coz of i++ adds one extra number before it exits
 }
 
-void PrintTokens(char str[], int tokMaxLen, char tokens[][tokMaxLen], int noOfTokens)
+void PrintTokens(int nTokens, int tokMaxLen, char tokens[][tokMaxLen], char str[], const char delimiters[])
 {
-    
+    printf("\n\nTokenization with delimiters \"%s\":\n", delimiters);
+    printf("%s\n", str); 
+    for (int i = 0; i < nTokens; i++)
+    {
+        printf("[%d] %s\n", i, tokens[i]); 
+    }   
 }
 int main()
 {
     printf("\n=== String Searching and Tokenization ===\n\n"); 
 
-    char str[] = "This is a sample string";
+    char str[] = "This, is a. sample-string";
     int occurrencesIndexes[sizeof(str)];
     int found = FindAllOccurrences(str, 'i', occurrencesIndexes);
     PrintOccurrences(str, occurrencesIndexes, found);
@@ -109,6 +114,15 @@ int main()
     char substring[] = "ring";
     int index = FindSubstring(str, substring);
     PrintSubstring(str, substring, index);
+
+    const char delimiters[] = " ,.-";
+    int tokMaxLen = sizeof(str);
+    char tokens[tokMaxLen][tokMaxLen], strCopy[tokMaxLen];
+    // Copy the original string before it will be ruined by TokenizeString and strtok
+    strncpy(strCopy, str, tokMaxLen);
+
+    int nTokens = TokenizeString(str, delimiters, tokMaxLen, tokens);
+    PrintTokens(nTokens, tokMaxLen, tokens, strCopy, delimiters);
 
     printf("\n\n=== ByteGarage ===\n\n");
     return EXIT_SUCCESS;

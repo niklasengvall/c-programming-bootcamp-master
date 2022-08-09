@@ -9,11 +9,10 @@
             "type": "cppdbg",
             "request": "launch",
             "args": [],
-            "stopAtEntry": true,
+            "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": 
-            false,
+            "externalConsole": false,
             "MIMode": "gdb",
 
             "program": "${workspaceFolder}/build/${fileBasenameNoExtension}_D",

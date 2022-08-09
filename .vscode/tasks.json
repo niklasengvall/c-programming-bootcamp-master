@@ -36,7 +36,7 @@
         {
             "type": "shell",
             "label": "DEBUG C: build active file",
-            "dependsOn": "make build dir",
+            //"dependsOn": "make build dir",
             "problemMatcher": [
                 "$gcc"
             ],
@@ -56,7 +56,7 @@
                     "-Wall",
                     "-Wextra",
                     "-Wpedantic",
-                    "-std=gnu2x",
+                    "-std=c17",
                     "${file}",
                     "-o",
                     "${workspaceFolder}\\build\\${fileBasenameNoExtension}_D.exe"
@@ -71,7 +71,7 @@
                     "-Wall",
                     "-Wextra",
                     "-Wpedantic",
-                    "-std=gnu2x",
+                    "-std=c17",
                     "${file}",
                     "-o",
                     "${workspaceFolder}/build/${fileBasenameNoExtension}_D",
@@ -87,7 +87,7 @@
                     "-Wall",
                     "-Wextra",
                     "-Wpedantic",
-                    "-std=gnu2x",
+                    "-std=c17",
                     "${file}",
                     "-o",
                     "${workspaceFolder}/build/${fileBasenameNoExtension}_D"
@@ -97,7 +97,7 @@
         {
             "type": "shell",
             "label": "RELEASE C: build active file",
-            "dependsOn": "make build dir",
+            //"dependsOn": "make build dir",
             "problemMatcher": [
                 "$gcc"
             ],
@@ -119,7 +119,7 @@
                     "-Wall",
                     "-Wextra",
                     "-Wpedantic",
-                    "-std=gnu2x",
+                    "-std=c17",
                     "${file}",
                     "-o",
                     "${workspaceFolder}\\build\\${fileBasenameNoExtension}_R.exe"
@@ -136,7 +136,7 @@
                     "-Wall",
                     "-Wextra",
                     "-Wpedantic",
-                    "-std=gnu2x",
+                    "-std=c17",
                     "${file}",
                     "-o",
                     "${workspaceFolder}/build/${fileBasenameNoExtension}_R",
@@ -154,7 +154,7 @@
                     "-Wall",
                     "-Wextra",
                     "-Wpedantic",
-                    "-std=gnu2x",
+                    "-std=c17",
                     "${file}",
                     "-o",
                     "${workspaceFolder}/build/${fileBasenameNoExtension}_R"
@@ -181,7 +181,7 @@
                     "-Wall",
                     "-Wextra",
                     "-Wpedantic",
-                    "-std=gnu2x",
+                    "-std=c17",
                     "${fileDirname}\\**.c",
                     "-o",
                     "${workspaceFolder}\\build\\${fileBasenameNoExtension}_D.exe"
@@ -196,7 +196,7 @@
                     "-Wall",
                     "-Wextra",
                     "-Wpedantic",
-                    "-std=gnu2x",
+                    "-std=c17",
                     "${fileDirname}/**.c",
                     "-o",
                     "${workspaceFolder}/build/${fileBasenameNoExtension}_D"
@@ -211,7 +211,7 @@
                     "-Wall",
                     "-Wextra",
                     "-Wpedantic",
-                    "-std=gnu2x",
+                    "-std=c17",
                     "${workspaceFolder}/*.c",
                     "-o",
                     "${workspaceFolder}/build/${fileBasenameNoExtension}_D"

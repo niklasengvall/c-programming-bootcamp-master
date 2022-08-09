@@ -2,7 +2,15 @@
 	"window.zoomLevel": 0,
 	"C_Cpp.errorSquiggles": "Enabled",
 	"files.associations": {
-		"stdlib.h": "c"
+		"stdlib.h": "c",
+		"errno.h": "c",
+		"features.h": "c",
+		"error_t.h": "c",
+		"features-time64.h": "c",
+		"stdc-predef.h": "c",
+		"stubs.h": "c",
+		"stubs-64.h": "c",
+		"errno-base.h": "c"
 	},
     // Controls if quick suggestions should show up while typing
 	"editor.quickSuggestions": {
