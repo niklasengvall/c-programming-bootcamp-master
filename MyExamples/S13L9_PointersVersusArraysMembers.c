@@ -9,9 +9,9 @@ typedef struct GuyP // Job member is a pointer
 {
     char *name;                     // 8
     char *job;                      // 8
-    bool active;                    // 1
-    int dimensions;     
-    double pos[MAX_DIMENSIONS]; 
+    bool active;                    // 1 (4 in reality)
+    int dimensions;                 // 4
+    double pos[MAX_DIMENSIONS];     // 24
 } GuyP;
 
 typedef struct GuyA // Job member is an Array
