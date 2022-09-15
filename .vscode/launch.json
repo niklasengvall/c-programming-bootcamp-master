@@ -38,7 +38,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "DEBUG C: build active file",
+            "preLaunchTask": "",
         }
     ]
 }
