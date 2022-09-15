@@ -10,7 +10,8 @@
 		"stdc-predef.h": "c",
 		"stubs.h": "c",
 		"stubs-64.h": "c",
-		"errno-base.h": "c"
+		"errno-base.h": "c",
+		"stdio.h": "c"
 	},
     // Controls if quick suggestions should show up while typing
 	"editor.quickSuggestions": {
