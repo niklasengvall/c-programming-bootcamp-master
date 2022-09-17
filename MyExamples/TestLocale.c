@@ -10,7 +10,7 @@ int main ()
     struct tm * timeinfo;
     char buffer[80];
 
-    struct lconv * lc;
+    struct lconv *lc;
 
     time(&rawtime);
     timeinfo = localtime (&rawtime);
