@@ -24,7 +24,7 @@ int main ()
         printf("Date is: %s\n", buffer);
 
         lc = localeconv();
-        printf("Currency symbol is: %s\n-\n", lc -> currency_symbol);
+        printf("Currency symbol is: %s\n-\n", lc->currency_symbol);
 
         setlocale(LC_ALL, "");
     } while (!twice++);
